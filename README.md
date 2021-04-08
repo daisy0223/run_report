@@ -20,14 +20,10 @@ This python script is used to transfer TOAST's aggregating excel output into a P
 
 
 ## Prerequisites
-- `python` version >= ~3.0
-- `reportlab` 
-- `pypdf2` 
+- `pandas, numpy, csv, datetime, matplotlib, reportlab, texwrap, pypdf2` 
 
-## Building
-
-
+## Usage
 ```Shell
-$> python3 input.xlxs run_report.pdf
+$> python3 autoreport.py /path/to/input.xlsx /path/to/output.pdf /path/to/toast_logo.png
 ```
 
