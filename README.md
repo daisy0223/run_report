@@ -1,48 +1,33 @@
 # RUN_REPORT
-intro
+This python script is used to transfer TOAST's aggregating excel output into a PDF run report.
 
 
-## Table of Contents
+## Contents for Input Excel
 
-- [Prerequisites](#prerequisites)
-- [Hardware Support](#hardware-support)
-- [Building](#building)
-- [Using QEMU](#using-qemu)
-- [Using BOCHS](#using-bochs)
-- [Using Gem5](#using-gem5)
-- [Rapid Development](#rapid-development)
-- [Resources](#resources)
-- [Maintainers](#maintainers)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- Sample
+- Pangolin
+- NextClade
+- DB_versions
+- Assem_Stat
+- VADR Stat
+- Assem_Len
+- Frac_N
+- Depth
+- Coverage
+- Variants
+- VADR_Alrts
+- VADR_Info
 
 
 ## Prerequisites
-
-- `gcc` cross compiler or `clang` (experimental) 
-- `grub` version >= ~2.02
-- `xorriso` (for creating ISO images)
-- `qemu` or `bochs` (for testing and debugging)
-
-## Hardware Support
-
-Nautilus works with the following hardware:
-
-- x86_64 machines (AMD and Intel)
-- Intel Xeon Phi, both KNC and KNL using [Philix](http://philix.halek.co) for easy booting
-- As a Hybrid Virtual Machine (HVM) in the [Palacios VMM](http://v3vee.org/palacios)
-
-Nautilus can also run as a virtual machine under QEMU, BOCHS, KVM, and in a simulated
-environment using [Gem5](http://gem5.org/Main_Page)
+- `python` version >= ~3.0
+- `reportlab` 
+- `pypdf2` 
 
 ## Building
 
-First, configure Nautilus by running either
-`make menuconfig` or `make defconfig`. The latter
-generates a default configuration for you. The former 
-allows you to customize your kernel build:
 
 ```Shell
-$> ln -s /usr/bin/grub2-mkrescue /usr/bin/grub-mkrescue
+$> python3 input.xlxs run_report.pdf
 ```
 
